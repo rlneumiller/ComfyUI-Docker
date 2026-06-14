@@ -14,8 +14,6 @@ podman run -it --rm \
   -e PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:256 \
   -v ~/comfyui/models:/workspace/ComfyUI/models:Z \
   -v ~/comfyui/output:/workspace/ComfyUI/output:Z \
-  -v ~/comfyui/settings:/workspace/ComfyUI/user:Z \
-  -v ~/comfyui/flows:/workspace/ComfyUI/flows:Z \
   -v ~/comfyui/custom_nodes:/workspace/ComfyUI/custom_nodes:Z \
-  localhost/comfyui-modular-max:latest
-
+  -v ~/comfyui/settings:/workspace/ComfyUI/user:Z \
+  localhost/comfyui-neu:latest
