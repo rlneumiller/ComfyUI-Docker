@@ -1,5 +1,5 @@
 # STEP 1/43
-FROM nvidia/cuda:13.2.0-cudnn-devel-ubuntu22.04
+FROM nvidia/cuda:13.0.0-cudnn-devel-ubuntu22.04
 
 # STEP 2/43
 ARG UID=1000
@@ -103,7 +103,7 @@ RUN pip install --upgrade pip
 RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
 
 # STEP 31/43
-RUN pip install xformers==0.0.35
+RUN pip install --pre xformers --index-url https://download.pytorch.org/whl/nightly/cu130
 
 # Install ComfyUI deps
 # STEP 32/43

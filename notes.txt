@@ -1,8 +1,8 @@
 # neu-comfy-ui-podman
 # Build image with ContainerFile:
-# podman build -t comfyui-modular-max:latest .
+# podman build -t comfyui-neu:latest .
 
-# Commandline to start container normally (access via http)
+# To start container normally (access via http)
 podman run -it --rm \
   --name comfyui-max \
   --device nvidia.com/gpu=all \
