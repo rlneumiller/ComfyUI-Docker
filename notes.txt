@@ -16,4 +16,23 @@ podman run -it --rm \
   -v ~/comfyui/output:/workspace/ComfyUI/output:Z \
   -v ~/comfyui/custom_nodes:/workspace/ComfyUI/custom_nodes:Z \
   -v ~/comfyui/settings:/workspace/ComfyUI/user:Z \
+  -v ~/comfyui/temp:/workspace/ComfyUI/temp:Z \
   localhost/comfyui-neu:latest
+
+In the event of a new nvidia driver update, may need to manually update nvidia container toolkit "sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml"
+
+mkdir -p /home/appuser/persistent-tmp
+export TMPDIR=/home/appuser/persistent-tmp 
+export TEMP=/home/appuser/persistent-tmp       
+export TMP=/home/appuser/persistent-tmp
+
+Upscaler:
+Reminder that z-image uses flux1 latent space
+https://huggingface.co/Comfy-Org/PixelDiT/tree/main/text_encoders
+https://huggingface.co/Comfy-Org/PixelDiT/tree/main/diffusion_models
+https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae
+
+
+
+
+
