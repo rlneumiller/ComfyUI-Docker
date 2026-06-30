@@ -42,5 +42,6 @@ jayn7/Z-Image-Turbo-GGUF
 Add img2img initial reference image
 script host folder configuration - create folders, repo cloning
 
+Access rootless container as root: podman exec -it --user root comfyui bash
 
 
